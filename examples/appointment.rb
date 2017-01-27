@@ -18,13 +18,14 @@ end
 
 actions = {
   send: -> (request, response) {
-    puts("sending... #{response['text']}")
+    puts("bot... #{response['text']}")
   },
   set_appointment: -> (request) {
     context = request['context']
     entities = request['entities']
     date_time = first_entity_value(entities, 'datetime')
     if date_time
+      # Add your code to fix an appointment.
       context['message'] = "is set at #{DateTime.parse(date_time).strftime("%d/%m/%Y %H:%M")}"
       context.delete('missing_time')
     else

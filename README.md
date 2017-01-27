@@ -21,10 +21,8 @@ gem install wit-*.gem
 Run in your terminal:
 
 ```bash
-ruby examples/quickstart.rb <your_token>
+ruby examples/appointment.rb <your_token>
 ```
-
-See the `examples` folder for more examples.
 
 ## API
 
